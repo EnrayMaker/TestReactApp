@@ -10,9 +10,5 @@ pool:
   name: demopool
 
 steps:
-- script:
-  displayName: 'Run a one-line script'
-
-- script:
-  - yarn install
-  - CI=true yarn test
+- script: yarn install
+- script: CI=true yarn test
