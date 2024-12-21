@@ -10,6 +10,12 @@ pool:
   name: demopool
 
 steps:
+- task: Cache@2
+  inputs:
+    key: 'node | "$(Agent.OS)"'
+    path: 'node_modules'
+  displayName: 'Cache'
+
 - script: yarn install
   displayName: 'Install dependencies'
 
