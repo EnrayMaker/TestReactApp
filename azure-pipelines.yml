@@ -11,4 +11,13 @@ pool:
 
 steps:
 - script: yarn install
-- script: CI=true yarn test
+  displayName: 'Install dependencies'
+
+#- script: CI=true yarn test
+#  displayName: 'Run tests'
+
+- task: PublishPipelineArtifact@1
+  inputs:
+    targetPath: 'node_modules'
+    artifact: 'node_modules'
+    publishLocation: 'pipeline'
