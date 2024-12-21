@@ -22,8 +22,8 @@ steps:
 #- script: CI=true yarn test
 #  displayName: 'Run tests'
 
-- task: PublishPipelineArtifact@1
-  inputs:
-    targetPath: 'node_modules'
-    artifact: 'node_modules'
-    publishLocation: 'pipeline'
+#- task: PublishPipelineArtifact@1
+#  inputs:
+#    targetPath: 'node_modules'
+#    artifact: 'node_modules'
+#    publishLocation: 'pipeline'
